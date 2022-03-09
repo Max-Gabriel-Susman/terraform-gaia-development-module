@@ -1,0 +1,2 @@
+*.tf linguist-detectable=true 
+*.tf linquist-attributes=terraform
