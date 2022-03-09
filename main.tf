@@ -2,14 +2,16 @@
 terraform {
     required_providers {
           gaia = { 
-            source = "hashicorp/gaia"
-            version = "="
+            source = "Max-Gabriel-Susman/gaia"
+            version = "=0.14.1"
           }
     }
 }
 
-# Configure Gaia
+# Configure Gaia - we can use provider configurations to manually dictate the concretion of the archetypal resources
 provider "gaia" {
+  project = ""
+  region = ""
   features {}
 }
 
@@ -24,5 +26,5 @@ resource "gaia_archetypal_virtual_machine" "example" {
   name = "example-archetypal-virtual-machine"
   archetypal_resource_group_name = gaia_archetypal_resource_group.name
   archetypal_resource_group_location = gaia_archetypal_resource_group.location
-  address_space       = ["10.0.0.0/16"]
+  # address_space       = ["10.0.0.0/16"] this might not actually apply to this resource, I guess we'll just have to see
 }
