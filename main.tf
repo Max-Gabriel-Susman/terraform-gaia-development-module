@@ -3,7 +3,7 @@ terraform {
     required_providers {
           gaia = { 
             source = "Max-Gabriel-Susman/gaia"
-            version = "=0.14.1"
+            version = "=0.14.6"
           }
     }
 }
